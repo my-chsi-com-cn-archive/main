@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>学信档案</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            background: #f5f5f5;
+        }
+
+        .container {
+            width: 1200px;
+            margin: 0px auto;
+            background: white;
+            padding: 20px;
+            box-shadow: 0 0 10px rgba(0,0,0,0.1);
+            position: relative; /* 关键：让按钮相对于此容器定位 */
+        }
+
+        img {
+            max-width: 100%;
+            display: block;
+        }
+
+
+	/* 按钮返回上一页 */
+        .button-pdf {
+            position: absolute;
+            padding: 20px 20px;
+            font-size: 16px;
+            color: white;
+            background-color: transparent; /* 完全透明 */
+            border: none;                                     /* 去除边框 */
+            cursor: pointer;
+        }
+
+
+
+
+
+
+/* ==========================
+   调试模式代码
+========================== */
+
+body.debug-mode .button-pdf {
+    background-color: rgba(255, 0, 0, 0.35) !important;
+    outline: 3px solid red !important;
+}
+
+
+}
+
+}
+/* ==========================
+   调试模式代码
+========================== */
+
+
+
+
+    </style>
+</head>
+<body>
+    <div class="container">
+        <img src="在线验证报告-本科.png" alt="学信档案">
+
+
+        <!-- pdf按钮 -->
+        <button class="button-pdf" onclick="window.location.href='pdf-本科.html'" style="top: 240px; left: 1130px;"></button>
+
+
+
+
+</button>
+
+    </div>
+
+
+
+
+
+
+
+<script>
+
+// 获取当前网址参数
+const params = new URLSearchParams(window.location.search);
+
+// 判断是否开启调试模式
+if (params.get("debug") === "1") {
+
+    document.body.classList.add("debug-mode");
+
+    console.log("调试模式已开启");
+
+} else {
+
+    document.body.classList.remove("debug-mode");
+
+    console.log("正常模式");
+
+}
+
+</script>
+
+
+
+
+
+</body>
+</html>
